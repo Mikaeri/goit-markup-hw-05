@@ -13,10 +13,9 @@
 	--social-active-color:#31D0AA;
 	/* ========/COLOR-GAMMA============ */
 
-		--main-value: 24px;
+	--main-value: 24px;
 }
 /*========================/VAR=====================*/
-
 
 /* =====================BODY-STYLES================ */
 h1,
@@ -128,17 +127,9 @@ body {
 	letter-spacing: 0.03em;
 
 	color: var(--primary-brand-color);
-
-
-
 }
 
-.navigation-link:hover,
-.navigation-link:focus {
-	color: #434455;
-}
-
-.navigation-link:active,
+.navigation-link:active
 .contact-link:hover,
 .contact-link:focus {
 	color: var(--primary-brand-color);
@@ -166,7 +157,6 @@ body {
 	font-weight: 500;
 
 	color: inherit;
-
 }
 
 .contact-list {
@@ -247,7 +237,6 @@ body {
 	line-height: 1.07;
 
 	color: var(--doc-color);
-
 }
 
 .hero-button {
@@ -255,27 +244,18 @@ body {
 	padding: 16px 32px;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 4px;
 
 	line-height: 1.19;
 
-	background: var(--primary-brand-color);
+	background-color: var(--primary-brand-color);
 	color: var(--doc-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-
+	border-radius: 4px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-				0px 1px 1px rgba(46, 47, 66, 0.16),
-				0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.hero-button:active {
-	background-color: var(--active-hero-button);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	background-color:var(--active-hero-button);
 }
 /* =====================/HERO====================== */
 
@@ -312,7 +292,7 @@ body {
 .soft-skill-icons {
 	width: 64px;
 	height: 64px;
-	}
+}
 
 .soft-skill-text {}
 /* =====================/SOFT-SKILLS================ */
@@ -397,6 +377,11 @@ body {
     background-color: var(--primary-brand-color);
 }
 
+.team-social-link:hover,
+.team-social-link:focus{
+	background-color:var(--active-hero-button);
+}
+
 .team-social-icon {
     width: 16px;
     height: 16px;
@@ -447,7 +432,6 @@ body {
 }
 /* =====================/CUSTOMERS====================== */
 
-
 /* =====================FOOTER====================== */
 .footer {
 	padding-top: 100px;
@@ -484,12 +468,12 @@ body {
 }
 
 .social-media {
-margin-bottom: 16px;
+	margin-bottom: 16px;
 
-font-weight: 600;
-line-height: 1.5;
+	font-weight: 600;
+	line-height: 1.5;
 
-color: var(--doc-color);
+	color: var(--doc-color);
 }
 
 .footer-social-list {
@@ -601,9 +585,9 @@ color: var(--doc-color);
 .work-link>img {}
 
 .portfolio-content-wrapper{
-padding-top: 32px;
-padding-bottom: 32px;
-padding-left: 16px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	padding-left: 16px;
 }
 
 .work-projects {}
