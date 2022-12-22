@@ -13,7 +13,24 @@
 	--social-active-color:#31D0AA;
 	/* ========/COLOR-GAMMA============ */
 
+	/* ========MODAL-GAMMA============= */
+	--backdrop-color:rgba(46, 47, 66, 0.4);
+	--modal-window:#FCFCFC;
+	/* ========/MODAL-GAMMA============= */
+
+	/* ===============INDEX============= */
+	--backdrop-idx:100;
+	--modal-idx:1000;
+	/* ==============/INDEX============= */
+
+	/* ===============VALUE============= */
 	--main-value: 24px;
+	/* ==============/VALUE============= */
+
+	/* ==============TRANSITION========= */
+	--main-cubic-bezier:cubic-bezier(0.4, 0, 0.2, 1);
+	--main-duration:250ms;
+	/* =============/TRANSITION========= */
 }
 /*========================/VAR=====================*/
 
@@ -131,14 +148,6 @@ body {
 	color: var(--primary-brand-color);
 }
 
-.navigation-link:active{
-	color: var(--active-hero-button);
-}
-.contact-link:hover,
-.contact-link:focus {
-	color: var(--primary-brand-color);
-}
-
 .header-logo {
 	color: var(--dark-color);
 }
@@ -164,6 +173,11 @@ body {
 
 	color: inherit;
 }
+
+.navigation-link:active{
+	color: var(--active-hero-button);
+}
+
 .navigation-link:active.navigation-link::after{
 	content: '';
 
@@ -195,6 +209,13 @@ body {
 	padding-bottom: var(--main-value);
 	
 	color: var(--text-color);
+
+	transition: color var(--main-duration) var(--main-cubic-bezier);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+	color: var(--primary-brand-color);
 }
 /* =====================/HEADER====================== */
 
@@ -269,6 +290,8 @@ body {
 	color: var(--doc-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+
+	transition: background-color var(--main-duration) var(--main-cubic-bezier);
 }
 
 .hero-button:hover,
@@ -393,6 +416,8 @@ body {
 	border-radius: 50%;
 
     background-color: var(--primary-brand-color);
+
+	transition: background-color var(--main-duration) var(--main-cubic-bezier) ;
 }
 
 .team-social-link:hover,
@@ -443,10 +468,14 @@ body {
 
 	border: 1px solid #8E8F99;
 	border-radius: 4px; 
+
+	transition: border-color var(--main-duration) var(--main-cubic-bezier);
 }
 
 .customer-icon {
  	fill:var(--sub-text-color);
+
+	transition: fill var(--main-duration) var(--main-cubic-bezier);
 }
 /* =====================/CUSTOMERS====================== */
 
@@ -517,6 +546,8 @@ body {
 
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
+
+	transition: background-color var(--main-duration) var(--main-cubic-bezier);
 }
 
 .footer-social-link:hover,
@@ -557,6 +588,10 @@ body {
 
 	color: var(--primary-brand-color);
 	background-color: var(--light-color);
+
+	transition: color var(--main-duration) var(--main-cubic-bezier),
+	 background-color var(--main-duration) var(--main-cubic-bezier),
+		   box-shadow var(--main-duration) var(--main-cubic-bezier);
 }
 
 .filter-buttons:active,
@@ -579,6 +614,8 @@ body {
 }
 
 .work-item {
+	position: relative;
+
 	flex-basis: calc(100%/3 - var(--main-value));
 	margin-left: var(--main-value);
 	margin-bottom: var(--main-value);
@@ -591,6 +628,8 @@ body {
 	border-bottom: 0.5px solid #F4F4FD;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 	background-color: var(--doc-color);
+
+	transition:box-shadow var(--main-duration) var(--main-cubic-bezier);
 }
 
 .work-link:hover,
@@ -600,7 +639,36 @@ body {
 				0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.work-overlay{
+	position: relative;
+	overflow: hidden;
+}
+
 .work-link>img {}
+
+.work-overlay-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translate(0, 100%);
+	overflow: auto;
+	padding: 40px 32px 164px;
+
+	font-weight: 400;
+
+	background-color:var(--primary-brand-color);
+	color: var(--light-color);
+	
+	transition: transform var(--main-duration) var(--main-cubic-bezier);
+
+}
+
+.work-link:hover .work-overlay-text,
+.work-link:focus .work-overlay-text{
+	transform: translate(0, 0);
+}
 
 .portfolio-content-wrapper{
 	padding-top: 32px;
@@ -609,5 +677,65 @@ body {
 }
 
 .work-projects {}
+
+
 /* =====================/WORKS============================ */
 /* =====================/PORTFOLIO====================== */
+
+/* =====================MODAL====================== */
+.backdrop {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: var(--backdrop-idx);
+
+	width: 100%;
+	height: 100%;
+
+	background-color: var(--backdrop-color);
+}
+
+.backdrop.is-hidden{
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 408px;
+	height: 576px;
+
+	background-color: var(--modal-window);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+				0px 1px 3px rgba(0, 0, 0, 0.12),
+				0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+.modal-btn {
+	position: absolute;
+	right:var(--main-value);
+	top: var(--main-value);
+	z-index: var(--modal-idx);
+
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color:var(--accent-color)
+}
+
+.modal-icon {
+
+}
