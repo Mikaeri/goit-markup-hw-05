@@ -1,5 +1,6 @@
-/* __________VAR____________ */
+/*========================VAR=====================*/
 :root {
+	/* ========COLOR-GAMMA============ */
 	--primary-brand-color: #4D5AE5;
 	--dark-color: #2E2F42;
 	--text-color: #434455;
@@ -10,12 +11,14 @@
 	--active-hero-button: #404BBF;
 	--portfolio-page-color: #E5E5E5;
 	--social-active-color:#31D0AA;
+	/* ========/COLOR-GAMMA============ */
 
-	--main-value: 24px;
+		--main-value: 24px;
 }
+/*========================/VAR=====================*/
 
 
-/* ___________BODY STYLES____ */
+/* =====================BODY-STYLES================ */
 
 h1,
 h2,
@@ -43,6 +46,7 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+
 	background-color: var(--doc-color);
 	color: var(--text-color)
 }
@@ -64,12 +68,13 @@ body {
 }
 
 .buttons {
+	align-items: center;
+	border: 0;
+
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
 	font-size: 16px;
 	letter-spacing: 0.04em;
-	align-items: center;
-	border: 0;
 }
 
 .buttons:hover,
@@ -89,10 +94,10 @@ body {
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+/* =====================/BODY-STYLES================ */
 
-/* ___________HEADER__________ */
+/* =====================HEADER====================== */
 .header {
-	
 	box-shadow: 
 		0px 2px 1px rgba(46, 47, 66, 0.08),
 		0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -102,29 +107,31 @@ body {
 .header-container {
 	display: flex;
 	align-items: center;
-
 }
 
 .navigation {
-	color: var(--dark-color);
-
 	display: flex;
 	align-items: center;
+
+	color: var(--dark-color);
 }
 
 .logo {
+    display: inline-block;
+	padding-top: var(--main-value);
+	padding-bottom: var(--main-value);
+	margin-right: 77px;
+
 	font-family: 'Raleway', sans-serif;
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 1.33;
 	letter-spacing: 0.03em;
+
 	color: var(--primary-brand-color);
 
-	margin-right: 77px;
 
-    display: inline-block;
-	padding-top: var(--main-value);
-	padding-bottom: var(--main-value);
+
 }
 
 .navigation-link:hover,
@@ -157,8 +164,9 @@ body {
     padding-top: var(--main-value);
 	padding-bottom: var(--main-value);
 
-	color: inherit;
 	font-weight: 500;
+
+	color: inherit;
 
 }
 
@@ -175,43 +183,51 @@ body {
 }
 
 .contact-link {
-	color: var(--text-color);
-
 	display: inline-block;
 	padding-top: var(--main-value);
 	padding-bottom: var(--main-value);
+	
+	color: var(--text-color);
 }
+/* =====================/HEADER====================== */
 
-/* ___________MAIN____________ */
+/* =====================MAIN====================== */
 .section-head {
+	margin-bottom: 8px;
+
 	font-weight: 600;
-	color: var(--dark-color);
 	font-size: 20px;
 	line-height: 1.2;
 
-	margin-bottom: 8px;
+	color: var(--dark-color);
 }
 
 .section-title {
-	font-weight: 600;
-	color: var(--dark-color);
+	margin-bottom: 72px;
 	text-align: center;
+
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 1.1;
-
-	margin-bottom: 72px;
+	
+	color: var(--dark-color);
 }
 
 .section {
 	padding-top: 120px;
 	padding-bottom: 120px;
 }
+/* =====================/MAIN====================== */
 
-
-/* ___________HERO____________ */
+/* =====================HERO====================== */
 .hero {
+	max-width: 1440px;
+	padding-top: 192px;
+	padding-bottom: 192px;
+	margin: 0 auto;
+	
 	font-weight: 600;
-
+	
 	background-color: var(--dark-color);
 	background-image:
 	linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
@@ -219,37 +235,34 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position:center;
-
-	max-width: 1440px;
-	padding-top: 192px;
-	padding-bottom: 192px;
-	margin: 0 auto;
 }
 
 .hero-head {
+	width: 492px;
+	margin-bottom: 48px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
 
 	font-size: 56px;
 	line-height: 1.07;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+
 	color: var(--doc-color);
 
-	width: 492px;
-	margin-bottom: 48px;
 }
 
 .hero-button {
 	display: block;
+	padding: 16px 32px;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 4px;
+
 	line-height: 1.19;
+
 	background: var(--primary-brand-color);
 	color: var(--doc-color);
-
-	padding: 16px 32px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border-radius: 4px;
 
 
 }
@@ -265,10 +278,9 @@ body {
 	background-color: var(--active-hero-button);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+/* =====================/HERO====================== */
 
-
-/* ___________SOFT SKILLS_____ */
-
+/* =====================SOFT-SKILLS================ */
 .soft-skills {
 	padding-bottom: 0;
 }
@@ -277,10 +289,8 @@ body {
 .soft-skill-list {
 	display: flex;
 	flex-wrap: wrap;
-
 	margin-left: calc(-1*var(--main-value));
 	margin-bottom: calc(-1*var(--main-value));
-
 }
 
 .soft-skill-items {
@@ -293,13 +303,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 8px;
-
 	width: 264px;
 	height: 112px;
+	margin-bottom: 8px;
 
 	background-color:var(--light-color);
-	
 }
 
 .soft-skill-icons {
@@ -308,14 +316,14 @@ body {
 	}
 
 .soft-skill-text {}
+/* =====================/SOFT-SKILLS================ */
 
-/* ___________WHAT WE DOING___ */
+/* =====================WHAT-WE-DOING================ */
 .doing {}
 
 .doing-list {
 	display: flex;
 	flex-wrap: wrap;
-
 	margin-left: calc(-1*var(--main-value));
 	margin-bottom: calc(-1*var(--main-value));
 }
@@ -325,9 +333,9 @@ body {
 	margin-left: var(--main-value);
 	margin-bottom: var(--main-value);
 }
+/* =====================/WHAT-WE-DOING================ */
 
-
-/* ___________TEAM____________ */
+/* =====================TEAM========================== */
 .team {
 	background-color: var(--light-color);
 }
@@ -335,16 +343,15 @@ body {
 .team-list {
 	display: flex;
 	flex-wrap: wrap;
-
 	margin-left: calc(-1*var(--main-value));
 	margin-bottom: calc(-1*var(--main-value));
-
 }
 
 .team-item {
 	flex-basis: calc(100%/4 - var(--main-value));
 	margin-left: var(--main-value);
 	margin-bottom: var(--main-value);
+	padding-bottom: 32px;
 
 	background-color: var(--doc-color);
 	box-shadow:
@@ -352,7 +359,6 @@ body {
 		0px 1px 1px rgba(46, 47, 66, 0.16),
 		0px 2px 1px rgba(46, 47, 66, 0.08);
 	border-radius: 0px 0px 4px 4px;
-	padding-bottom: 32px;
 }
 
 .team-member {
@@ -374,13 +380,11 @@ body {
 	justify-content: center;
 	align-items:center;
 	gap:24px;
-	
 }
 
 .team-social-item {
-		width:40px;
-	    height:40px;
-
+	width:40px;
+	height:40px;
 }
 
 .team-social-link {
@@ -391,31 +395,27 @@ body {
 	align-items: center;
 	border-radius: 50%;
 
-
     background-color: var(--primary-brand-color);
-
-
-
 }
 
 .team-social-icon {
     width: 16px;
     height: 16px;
+	
 	fill:var(--light-color)
 }
+/* =====================/TEAM========================== */
 
+/* =====================CUSTOMERS====================== */
 
-/* ____CUSTOMERS____ */
-
-.customers {
-}
+.customers {}
 
 .customer-list {
 	display: flex;
 	gap:24px;
 	justify-content: center;
 	align-items: center;
-	}
+}
 
 .customer-item{
 	width: 168px;
@@ -436,32 +436,32 @@ body {
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #8E8F99;
-    border-radius: 4px; 
 	width: 100%;
 	height: 100%;
+
+	border: 1px solid #8E8F99;
+	border-radius: 4px; 
 }
 
 .customer-icon {
  	fill:var(--sub-text-color);
 }
+/* =====================/CUSTOMERS====================== */
 
 
-
-/* ___________FOOTER__________ */
+/* =====================FOOTER====================== */
 .footer {
-	background-color: var(--dark-color);
-
 	padding-top: 100px;
 	padding-bottom: 100px;
-	}
+
+	background-color: var(--dark-color);
+}
 
 .footer>.container{
 	display: flex;
 }
 
-.footer-container {
-}
+.footer-container {}
 
 .footer .logo{
 	margin-right: 0;
@@ -471,14 +471,13 @@ body {
 
 .footer-logo {
 	color: var(--light-color);
-
 }
 
 
 .footer-text {
-	color: var(--accent-color);
 	max-width: 264px;
- 
+
+	color: var(--accent-color);
 }
 
 .footer-social-container {
@@ -486,35 +485,37 @@ body {
 }
 
 .social-media {
+margin-bottom: 16px;
+
 font-weight: 600;
 line-height: 1.5;
 
 color: var(--doc-color);
-margin-bottom: 16px;
 }
+
 .footer-social-list {
 	display:flex;
 	gap: 16px;
 }
+
 .footer-social-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	width: 40px;
 	height: 40px;
 
 }
+
 .footer-social-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
 
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
-
-	width: 100%;
-	height: 100%;
 }
 
 .footer-social-link:hover,
@@ -525,24 +526,21 @@ margin-bottom: 16px;
 .footer-social-icon {
 	width:24px;
 	height:24px;
+
 	fill:var(--light-color)
 }
+/* =====================/CUSTOMERS====================== */
 
-
-/* ___________PORTFOLIO________ */
-
+/* =====================PORTFOLIO====================== */
 .work {	
 	padding-top: 96px;
 }
 
-/* ___________FILTER___________ */
-
+/* =====================FILTER========================== */
 .filter-list {
 	display: flex;
 	justify-content: center;
-
 	margin-bottom: 72px;
-
 }
 
 .filter-item:not(:first-child) {
@@ -550,14 +548,14 @@ margin-bottom: 16px;
 }
 
 .filter-buttons {
+	padding: 12px 24px;
+	border-radius: 4px;
+	border:0;
+
 	line-height: 1.5;
 
 	color: var(--primary-brand-color);
 	background-color: var(--light-color);
-	border:0;
-	border-radius: 4px;
-
-	padding: 12px 24px;
 }
 
 .filter-buttons:active,
@@ -569,13 +567,12 @@ margin-bottom: 16px;
 				0px 2px 1px rgba(0, 0, 0, 0.08),
 				0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+/* =====================/FILTER========================== */
 
-/* ___________WORKS____________ */
-
+/* =====================WORKS============================ */
 .work-list {
 	display: flex;
 	flex-wrap: wrap;
-
 	margin-left: calc(-1*var(--main-value));
 	margin-bottom: calc(-1*var(--main-value));
 }
@@ -584,15 +581,12 @@ margin-bottom: 16px;
 	flex-basis: calc(100%/3 - var(--main-value));
 	margin-left: var(--main-value);
 	margin-bottom: var(--main-value);
-
 }
-
-
 
 .work-link {
 	display: block;
-	color: inherit;
 
+	color: inherit;
 	border-bottom: 0.5px solid #F4F4FD;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 	background-color: var(--doc-color);
@@ -614,3 +608,5 @@ padding-left: 16px;
 }
 
 .work-projects {}
+/* =====================/WORKS============================ */
+/* =====================/PORTFOLIO====================== */
