@@ -174,11 +174,13 @@ body {
 	color: inherit;
 }
 
-.navigation-link:active{
+.navigation-link:hover,
+.navigation-link:focus{
 	color: var(--active-hero-button);
 }
 
-.navigation-link:active.navigation-link::after{
+.navigation-link:hover.navigation-link::after,
+.navigation-link:focus.navigation-link::after{
 	content: '';
 
 	position:absolute;
