@@ -172,11 +172,18 @@ body {
 	font-weight: 500;
 
 	color: inherit;
+	
+	transition: color 2500ms var(--main-cubic-bezier);
 }
 
 .navigation-link:hover,
 .navigation-link:focus{
 	color: var(--active-hero-button);
+}
+.navigation-link::after{
+	content: '';
+
+	transition: background-color 2500ms var(--main-cubic-bezier);
 }
 
 .navigation-link:hover.navigation-link::after,
