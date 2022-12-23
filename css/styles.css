@@ -754,6 +754,7 @@ body {
 
 .modal-btn:active .modal-icon{
 	fill:var(--doc-color);
+	
 }
 
 .modal-icon {}
