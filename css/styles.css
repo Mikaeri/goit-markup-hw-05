@@ -176,8 +176,7 @@ body {
 	transition: color var(--main-duration) var(--main-cubic-bezier);
 }
 
-.navigation-link:hover,
-.navigation-link:focus{
+.navigation-link.current{
 	color: var(--active-hero-button);
 }
 .navigation-link::after{
@@ -186,8 +185,7 @@ body {
 	transition: background-color var(--main-duration) var(--main-cubic-bezier);
 }
 
-.navigation-link:hover.navigation-link::after,
-.navigation-link:focus.navigation-link::after{
+.navigation-link.current.navigation-link::after{
 	content: '';
 
 	position:absolute;
